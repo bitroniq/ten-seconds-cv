@@ -13,13 +13,13 @@ I've compiled it with elements from several templates, including:
 
 ![CV Screenshot](screen.png)
 
-## Installing pre-requisites (Windows)
+## Install pre-requisites (Windows)
 
 1. Install [MiKTeX](https://miktex.org/howto/install-miktex), a TeX
    distribution for Windows that includes a large number of major packages.
 
 2. Install an editor to edit and compile LaTeX documents:
-  - [TexWorks](http://www.tug.org/texworks/)
+  - [TexWorks](http://www.tug.org/texworks/) (comes with MiKTeX)
   - [TeXstudio](http://www.texstudio.org/)
   - [Texmaker](http://www.xm1math.net/texmaker/)
 
@@ -28,6 +28,23 @@ using `git clone` and open the template.tex file in your editor.
 
 **Important**: Make sure to compile with XeLaTeX, not PDFLaTeX.
 You're good to go!
+
+## Install pre-requisites (Debian/Ubuntu)
+* texlive: `sudo apt-get install texlive`
+* texlive-xetex: `sudo apt-get install texlive-xetex`
+* texlive-lualatex: `sudo apt-get install texlive-luatex`
+* texlive-math-extra: `sudo apt-get install texlive-math-extra`
+* texmaker: `sudo apt-get install texmaker`
+
+## Build
+Open `template.tex` with `TexMaker` or `TexWorks` and compile using XeLaTeX
+
+## Fontawesom support
+To enable fontawesome support, include the fontawesome package in the cv.tex file
+```
+\usepackage{fontawesome}
+```
+and compile the document using LuaLaTex
 
 ## License
 

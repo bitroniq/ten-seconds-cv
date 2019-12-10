@@ -1,10 +1,10 @@
 SHELL   = /bin/sh
 
-FILE0   = cv
+FILE0   = cv-piotr-kowalski
 TEX     = $(FILE0).tex
 XDV     = $(FILE0).xdv
 PDF     = $(FILE0).pdf
-PDFOUT  = $(FILE0)-piotr-kowalski.pdf
+PDFOUT  = $(FILE0)-encrypted.pdf
 
 
 all:

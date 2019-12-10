@@ -34,6 +34,7 @@ You're good to go!
 * texlive-xetex: `sudo apt-get install texlive-xetex`
 * texlive-lualatex: `sudo apt-get install texlive-luatex`
 * texlive-math-extra: `sudo apt-get install texlive-math-extra`
+* texlive-fonts-extra: `sudo apt-get install texlive-fonts-extra`
 * texmaker: `sudo apt-get install texmaker`
 
 ## Build

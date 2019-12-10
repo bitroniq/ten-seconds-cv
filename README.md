@@ -36,7 +36,7 @@ You're good to go!
 
 Open `cv.tex` with `TexMaker` or `TexWorks` and compile using XeLaTeX
 
-## Build (Debina/Ubuntu)
+## Build (Debian/Ubuntu)
 
 	make all
 

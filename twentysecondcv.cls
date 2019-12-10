@@ -24,6 +24,7 @@
 \RequirePackage{pgffor}
 \RequirePackage{marvosym}
 \RequirePackage{parskip}
+\RequirePackage{fontawesome}
 
 \usepackage{enumitem}
 \setlist[itemize]{leftmargin=*}
@@ -141,6 +142,7 @@
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
+\newcommand{\cvinstagram}[1]{\renewcommand{\cvinstagram}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
@@ -164,8 +166,8 @@
 		\end{tikzpicture}
 	}
 }
-\newcommand\education[1]{ 
-	\renewcommand{\education}{
+\newcommand\projects[1]{ 
+	\renewcommand{\projects}{
 		{#1}
 	}
 }
@@ -184,6 +186,20 @@
   \begin{textblock}{6}(0.5, 0.2)
 
     %------------------------------------------------
+
+		%------------------------------------------------
+		
+		\ifthenelse{\equal{\profilepic}{}}{}{
+			\begin{center}
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\clip (600/2, 567/2) circle (567/2);
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{\profilepic}};
+				\end{tikzpicture}
+			\end{center}
+		}
+
+		%------------------------------------------------
+
     
         \vspace{4mm}
     {\Huge\color{pblue}\cvname}
@@ -196,9 +212,17 @@
 
     %------------------------------------------------
     
-    \vspace{3mm}
+    \vspace{4mm}
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
+      \ifthenelse{\equal{\cvdate}{}}{}{
+      		{$
+              \begin{array}{l}
+              \hspace{4mm} \Huge \textnormal{\faInfo} 
+              \end{array}
+              $} 
+            & \cvdate\\}
+
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
       		{$
               \begin{array}{l}
@@ -207,7 +231,7 @@
               $} 
             & \cvnumberphone\\}
             
-      \ifthenelse{\equal{\cvsite}{}}{}{
+      \ifthenelse{\equal{\href{\cvsite}{\cvsite}}{}}{}{
             {$
               \begin{array}{l}
               \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
@@ -236,12 +260,52 @@
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
             }   
+        \ifthenelse{\equal{\cvinstagram}{}}{}{
+            {$
+              \begin{array}{l}
+              \hspace{3mm} \huge \textnormal{\faInstagram}
+              \end{array}
+              $} & \href{https://www.instagram.com/\cvinstagram}{\cvinstagram} \\
+            }   
             
     \end{tabular}
 
     %------------------------------------------------
-    \vspace{3mm}
-    \profilesection{Technical Skills}{1.2cm}
+    \vspace{4mm}
+    \profilesection{Skills}{4cm}
+    
+    {\large \textbf{Overview}}
+
+	\skills
+        
+        %------------------------------------------------
+        
+        \vspace{3mm}
+       
+	 {\large \textbf{Programming}} 
+
+		 \programming
+      
+  \end{textblock}
+}
+
+%----------------------------------------------------------------------------------------
+%  SECOND SIDEBAR LAYOUT
+%----------------------------------------------------------------------------------------
+
+\newcommand{\makesecondprofile}{
+  \begin{tikzpicture}[remember picture,overlay]
+      \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+  \end{tikzpicture}
+
+  %------------------------------------------------
+
+  \begin{textblock}{6}(0.5, 0.2)
+
+
+    %------------------------------------------------
+    \vspace{4mm}
+    \profilesection{Skills}{4cm}
     
     {\large \textbf{Overview}}
 
@@ -255,14 +319,13 @@
 
 		 \programming
          
-        \vspace{3mm}
-        \profilesection{Education}{3cm} 
+        \vspace{4mm}
+        \profilesection{Projects}{3cm} 
         
-        \education
+        \projects
       
   \end{textblock}
 }
-
 
 %----------------------------------------------------------------------------------------
 %	 COLOURED SECTION TITLE BOX
@@ -286,7 +349,7 @@
 		\LARGE\headingfont\color{headercolor}%
 		\@sectioncolor #1%
 	}
-  \par\vspace{1mm}
+  \par\vspace{\parskip}
 }
 
 \renewcommand{\subsection}[1]{

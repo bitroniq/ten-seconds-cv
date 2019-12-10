@@ -35,24 +35,30 @@ You're good to go!
 * texlive-lualatex: `sudo apt-get install texlive-luatex`
 * texlive-math-extra: `sudo apt-get install texlive-math-extra`
 * texlive-fonts-extra: `sudo apt-get install texlive-fonts-extra`
+* texlive-pstricks: `sudo apt-get install texlive-pstricks`
 * texmaker: `sudo apt-get install texmaker`
 
-## Build
-Open `template.tex` with `TexMaker` or `TexWorks` and compile using XeLaTeX
+## Build (Windows)
+
+Open `cv.tex` with `TexMaker` or `TexWorks` and compile using XeLaTeX
+
+## Build (Debina/Ubuntu)
+
+	make all
 
 ## Fontawesom support
+
 To enable fontawesome support, include the fontawesome package in the cv.tex file
-```
-\usepackage{fontawesome}
-```
+
+	\usepackage{fontawesome}
+
 and compile the document using LuaLaTex
 
 ## License
 
-```
-Copyright 2019 Piotr Kowalski
+	Copyright 2019 Piotr Kowalski
 
-GNU GENERAL PUBLIC LICENSE
-Version 3, 29 June 2007
-```
+	GNU GENERAL PUBLIC LICENSE
+	Version 3, 29 June 2007
+
 

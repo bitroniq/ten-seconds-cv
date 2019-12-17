@@ -142,7 +142,7 @@
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
-\newcommand{\cvinstagram}[1]{\renewcommand{\cvinstagram}{#1}}
+%\newcommand{\cvinstagram}[1]{\renewcommand{\cvinstagram}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
@@ -157,7 +157,7 @@
 \newcommand\programming[1]{ 
 	\renewcommand{\programming}{
 		\begin{tikzpicture}
-        	\node [above right] at (0, 4) {$0 \: LOC \: \arrow{3.2} \: 5000 \: LOC$};
+        	\node [above right] at (0, 5) {$0 \: LOC \: \arrow{3.2} \: 5000 \: LOC$};
 			\foreach [count=\i] \x/\y in {#1}{
 				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
 				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
@@ -169,6 +169,20 @@
 \newcommand\projects[1]{ 
 	\renewcommand{\projects}{
 		{#1}
+	}
+}
+
+% Command for printing hard skill progress bars
+\newcommand\hardskills[1]{ 
+	\renewcommand{\hardskills}{
+		\begin{tikzpicture}
+        	%\node [above right] at (0, 4) {$0 \: LOC \: \arrow{3.2} \: 5000 \: LOC$};
+			\foreach [count=\i] \x/\y in {#1}{
+				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
+				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
+				\node [above right] at (0,\i+0.35) {\x};
+			}
+		\end{tikzpicture}
 	}
 }
 
@@ -260,13 +274,13 @@
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
             }   
-        \ifthenelse{\equal{\cvinstagram}{}}{}{
-            {$
-              \begin{array}{l}
-              \hspace{3mm} \huge \textnormal{\faInstagram}
-              \end{array}
-              $} & \href{https://www.instagram.com/\cvinstagram}{\cvinstagram} \\
-            }   
+%        \ifthenelse{\equal{\cvinstagram}{}}{}{
+%            {$
+%              \begin{array}{l}
+%              \hspace{3mm} \huge \textnormal{\faInstagram}
+%              \end{array}
+%              $} & \href{https://www.instagram.com/\cvinstagram}{\cvinstagram} \\
+%            }   
             
     \end{tabular}
 
@@ -315,12 +329,14 @@
         
         \vspace{3mm}
        
-	 {\large \textbf{Programming}} 
+	 {\large \textbf{Hard Skills}} 
 
-		 \programming
+		 \hardskills
          
         \vspace{4mm}
-        \profilesection{Projects}{3cm} 
+        \profilesection{Projects}{3cm}
+
+        {\large \textbf{Open Source}} 
         
         \projects
       

@@ -34,15 +34,15 @@ You're good to go!
 
 ## Build (Windows)
 
-Open `cv.tex` with `TexMaker` or `TexWorks` and compile using XeLaTeX
+Open `.tex` file with `TexMaker` or `TexWorks` and compile using XeLaTeX
 
 ## Build (Debian/Ubuntu)
 
 	make all
 
-## Fontawesom support
+## FontAwesom support
 
-To enable fontawesome support, include the fontawesome package in the cv.tex file
+To enable fontawesome support, include the fontawesome package in the `.tex` file
 
 	\usepackage{fontawesome}
 
@@ -52,10 +52,11 @@ and compile the document using LuaLaTex
 
 The elements comes from several templates, including:
 
-1. [Carmine Spagnuolo's Twenty Seconds Curriculum Vitae](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex)
-2. [Carmine Benedetto's Smart Fancy LaTeX CV](https://github.com/neoben/smart-fancy-latex-cv)
-3. [Adrien Friggeri's Fancy CV](https://www.sharelatex.com/templates/52fb8c1f33621a613683ecad)
-4. [Harsh Gadgil opensorcer/Data-Engineer-Resume-LaTeX](https://github.com/opensorceror/Data-Engineer-Resume-LaTeX)
+1. [Font Awesome Icons](https://faicons.com/)
+2. [Carmine Spagnuolo's Twenty Seconds Curriculum Vitae](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex)
+3. [Carmine Benedetto's Smart Fancy LaTeX CV](https://github.com/neoben/smart-fancy-latex-cv)
+4. [Adrien Friggeri's Fancy CV](https://www.sharelatex.com/templates/52fb8c1f33621a613683ecad)
+5. [Harsh Gadgil opensorcer/Data-Engineer-Resume-LaTeX](https://github.com/opensorceror/Data-Engineer-Resume-LaTeX)
 
 
 ## License

@@ -5,7 +5,7 @@
 This template I use for my own resume/CV.
 
 
-![CV Screenshot](screen.png)
+![CV Screenshot](cv-piotr-kowalski.png)
 
 ## Install pre-requisites (Windows)
 

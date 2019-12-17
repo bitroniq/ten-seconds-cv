@@ -315,21 +315,31 @@
   %------------------------------------------------
 
   \begin{textblock}{6}(0.5, 0.2)
+
+
     %------------------------------------------------
     \vspace{4mm}
     \profilesection{Skills}{4cm}
+    
     {\large \textbf{Overview}}
-    \skills
-    %------------------------------------------------
-    \vspace{3mm}
-    {\large \textbf{Hard Skills}} 
-    \hardskills
-    %------------------------------------------------
-    \vspace{4mm}
-    \profilesection{Projects}{3cm}
-    {\large \textbf{Open Source}} 
-    \projects
-    %------------------------------------------------
+
+	\skills
+        
+        %------------------------------------------------
+        
+        \vspace{3mm}
+       
+	 {\large \textbf{Hard Skills}} 
+
+		 \hardskills
+         
+        \vspace{4mm}
+        \profilesection{Projects}{3cm}
+
+        {\large \textbf{Open Source}} 
+        
+        \projects
+      
   \end{textblock}
 }
 

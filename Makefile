@@ -23,5 +23,5 @@ help:
 	echo "USAGE: make [all/tex/handout/pw/clean]"
 
 clean:
-	rm -f *.aux *.dvi *.idx *.ilg *.ind *.log *.nav *.out *.snm *.xdv *.toc *~
+	rm -f *.aux *.dvi *.idx *.ilg *.ind *.log *.nav *.out *.snm *.xdv *.toc *.synctex.gz *~
 
